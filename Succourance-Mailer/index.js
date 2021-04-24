@@ -20,11 +20,11 @@ app.get('/', (req, res)=>
 });
 
 app.post('/send',(req,res) => {
-const output=`<p>You have a new contact request</p>
+const output=`<p>There is an emergency in your area</p>
 <h3>Contact Details:</h3>
 <ul>
 <li>Name: ${req.body.name}</li>
-<li>Company: ${req.body.company}</li>
+<li>Address: ${req.body.company}</li>
 <li>Email: ${req.body.email}</li>
 <li>Phone: ${req.body.phone}</li>
 </ul>
