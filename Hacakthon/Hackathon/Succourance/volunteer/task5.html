@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+<script type="text/javascript">
+
+  function text()
+  {
+    //document.getElementById("dsg_txt").innerHTML = ("Mr");//Designation(Mr,Mrs,Ms) from firebase database
+    document.getElementById("name_txt").innerHTML = ("");//Name from firebase database
+    document.getElementById("msg_txt").innerHTML = ("");//Message from firebase database
+    document.getElementById("addr_txt").innerHTML = ("");//Address from firebase database
+    document.getElementById("phn_txt").innerHTML = ("");//Phone Number from firebase database
+    document.getElementById("task_txt").innerHTML = ("");//Type of Task(Emergency or Errands,etc) from firebase database
+  }
+
+</script>
+
+
+
+
+
+  <body bgcolor="#FCDDEC"  onload="text()">
+
+
+<table cellpadding="7">
+  <tr>
+    <th id="name_txt"></th>
+    <th id="task_txt" align="left"></th>
+  </tr>
+  <tr>
+    <td>Message: </td>
+    <td id="msg_txt"></td>
+  </tr>
+  <tr>
+    <td>Address: </td>
+    <td id="addr_txt"></td>
+  </tr>
+  <tr>
+    <td>Phone Number: </td>
+    <td id="phn_txt"></td>
+  </tr>
+
+</table>
+
+  </body>
+</html>
