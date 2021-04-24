@@ -6,10 +6,10 @@ const nodemailer= require('nodemailer');
 
 const app= express();
 
-app.engine('handlebars', exphbs());
-app.set('view engine','handlebars');
+//app.engine('handlebars', exphbs());
+//app.set('view engine','handlebars');
 
-app.use('/public', express.static(path.join(__dirname,'public')));
+//app.use('/public', express.static(path.join(__dirname,'public')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -20,6 +20,8 @@ app.get('/', (req, res)=>
 });
 
 app.post('/send',(req,res) => {
+const emails= emailArraytoString(req.body.emails);
+//const emails= req.body.emails;
 const output=`<p>There is an emergency in your area</p>
 <h3>Contact Details:</h3>
 <ul>
@@ -43,9 +45,19 @@ let transporter = nodemailer.createTransport({
   }
 });
 
+function emailArraytoString(emailArray)
+{
+  var emails="";
+
+  for (i = 0; i < emailArray.length; i++) {
+    emails += emailArray[i] + ",";
+  }
+  return emails
+}
+
 let mailOptions = {
   from: '"NodeMailer Contact" <succourance@zohomail.in>', 
-  to: "saarth.shah28@gmail.com", 
+  to: emails , //
   subject: "Emergency SOS", 
   text: "Hello world?", 
   html: output, 
@@ -57,8 +69,9 @@ transporter.sendMail(mailOptions, (error,info)=>{
   }
 console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 console.log("Message sent: %s", info.messageId);
-
+ message= ('contact',{msg:'email has been sent'});
 res.render('contact',{msg:'email has been sent'});
+return message;
 });
 });
 app.listen(3000, () => console.log('Server Started'));
