@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+         "name": "Emergency SOS",
+         "image":"https://i.imgur.com/ECCegSS.png",
+         "desc":"I need urgent Help. Please get me someone to helpout"
+    },
+    {
+        "id": 2,
+         "name": "Errands",
+         "image":"https://i.imgur.com/nE2A3Ca.png",
+         "desc":"I need someone to do errands like bringing groceries"
+    },
+    {
+        "id": 3,
+         "name": "Technical Help",
+         "image":" https://i.imgur.com/kwkFIiS.png" ,
+         "desc":"I need urgent technical help with the my mobile or any other electronic device"
+    },
+    {
+        "id": 4,
+         "name": "Housework",
+         "image":"https://imgur.com/mn8wM4q.png",
+         "desc":"I need to get housework done like cleaning, polishing,gardening and many more"
+    },
+    {
+        "id": 5,
+         "name": "Emotional Support",
+         "image":" https://imgur.com/SOPTS3u.png",
+         "desc":"I need someone to talk to and give me support"
+    },
+    {
+        "id": 6,
+         "name": " Medical Help",
+         "image":" https://i.imgur.com/kwkFIiS.png" ,
+         "desc":"I need to get medicines"
+    }
+
+
+    
+]
